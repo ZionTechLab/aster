@@ -1,0 +1,80 @@
+.appBar {
+    height: var(--app-bar-height);
+    top: 0;
+    position: fixed;
+    background-color:var(--primary-color);
+     color: var(--font-color-light);
+    /* box-shadow: -10px 1px 20px -1px rgba(0, 0, 0, 0.507);
+    -webkit-box-shadow: -10px 1px 20px -1px rgba(0, 0, 0, 0.507);
+    -moz-box-shadow: -10px 1px 20px -1px rgba(0, 0, 0, 0.507); */
+    width: 100%;
+    z-index:99; box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+   
+}
+
+ .menuBtn {
+    position: fixed;
+    z-index: 100;
+    top: 13px;
+    box-shadow: -1px 13px 52px -15px rgba(0, 0, 0, 0.68);
+    border: none !important;
+}
+
+.menuBtn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+.menuBtn:active {
+    background-color: #e6e6e6;
+    transform: scale(0.95);
+} 
+
+/* .triangleLeft {
+    width: 70vW;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.triangleRight {
+
+    width: 70vW;
+    float: right;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    top: 0;
+} */
+
+/* .aa {
+    top: var(--app-bar-height);
+    height: 400px;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    opacity: 0.2;
+} */
+
+
+
+.appbar a {
+    color: inherit;
+    text-decoration: none;
+    padding: 10px 10px;
+    transition: 0.7s;
+}
+
+.menubtn {
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px 10px;
+    transition: 0.7s;
+}
+
+.menubtn:hover,
+.appbar a:hover {
+    background-color: var(--color-hover);
+    color: var(--font-color-hilight);
+    transition: 0.7s;
+}

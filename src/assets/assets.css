@@ -1,0 +1,26 @@
+.backDrop_container {
+    top: var(--app-bar-height);
+    height: 400px;
+    width: 100%;
+    position: fixed;
+    z-index: -1;
+    /* opacity: 0.2; */
+    /* background-color: aquamarine; */
+}
+.triangleLeft {
+    width: 70vW;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+.triangleRight {
+
+    width: 70vW;
+    float: right;
+    position: absolute;
+    top: 100px;
+    right: 0;
+    top: 0;
+}
+

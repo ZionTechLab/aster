@@ -1,0 +1,249 @@
+/* header {
+    width: 100%;
+    background-color: #b1b1b1;
+    z-index: 1000;
+}
+
+.menu-bar {
+    color: #FFF;
+    font-size: 25px;
+    cursor: pointer;
+    padding: 10px 12px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.menu-bar:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+}
+
+#tag-menu {
+    display: none;
+} */
+
+
+/* #tag-menu:checked~div.jw-drawer {
+    animation: slide-in 0.5s ease;
+    animation-fill-mode: forwards;
+} */
+
+.subList{
+    margin-left: 20px;
+}
+
+.drawer {
+    background-color: rgba(0, 0, 0, 0.137);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    visibility: collapse;
+    /* z-index: -1; */
+
+}
+
+.drawer-open {
+    visibility: visible;
+
+
+}
+
+div.jw-drawer {
+    visibility: visible;
+    position: fixed;
+    left: -250px;
+    background-color: #006faa;
+    height: 100%;
+    z-index: 100;
+    width: 230px;
+    /* z-index: 1; */
+    animation: slide-out 0.5s ease;
+    animation-fill-mode: forwards;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+}
+
+div.open {
+    animation: slide-in 0.5s ease;
+    animation-fill-mode: forwards;
+}
+
+.jw-drawer ul li {
+    list-style: none;
+}
+
+.jw-drawer ul li a {
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    color: #FFF;
+    border-top: 0.5px solid #059;
+}
+
+.jw-drawer ul li a:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.jw-drawer ul li a i {
+    width: 50px;
+    height: 35px;
+    text-align: center;
+    padding-top: 15px;
+}
+
+@keyframes slide-in {
+    from {
+        left: -280px;
+    }
+
+    to {
+        left: 0;
+    }
+}
+
+@keyframes slide-out {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: -280px;
+    }
+}
+
+
+.content {
+    padding: 100px 0 0 250px;
+}
+
+
+/* .drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0000005e;
+    z-index: 100;
+    visibility: hidden;
+
+}
+
+.drawer div {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 0px;
+    height: 100%;
+    background-color: #e4e4e4;
+    box-shadow: 0px 2px 4px -1px rgb(0 0 0 / 20%), 0px 4px 5px 0px rgb(0 0 0 / 14%), 0px 1px 10px 0px rgb(0 0 0 / 12%);
+    transition: 0.5s;
+
+padding-top: 60px;
+
+}
+
+.open div {
+    visibility: visible;
+    background-color: red;
+    width: 250px;
+
+}
+
+.closebtn {
+    position: absolute;
+    text-decoration: none;
+    top: 10px;
+    right: 10px;
+    font-size: 25px;
+    color: #000;
+}
+
+.closebtn:hover {
+    color: #000285;
+}
+ */
+.tree {
+    display: block;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    font-weight: lighter;
+    border-top: 1px solid #8181812d;
+}
+
+.tree li li {
+    padding-left: 20px;
+    list-style-type: none;
+}
+
+.level1 {
+
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    color: #dadada;
+    border-top: 0.5px solid #059;
+    border-bottom: 0.5px solid #059;
+    background-color: #0000005d;
+    /* font-weight: 500;
+    border-bottom: 1px solid #8181812d;
+
+    background-color: #c5c5c5; */
+}
+
+.level2 {
+    padding: 10px 20px;
+    text-decoration: none;
+    display: block;
+    color: #dadada;
+    border-top: 0.5px solid #059;
+    border-bottom: 0.5px solid #059;
+    background-color: #0000002f;
+}
+
+.tree a {
+    padding: 5px;
+    background-color: #8b8b8b;
+    cursor: pointer;
+    color: inherit;
+    display: block;
+    position: relative;
+    text-decoration: none;
+
+}
+
+.level1:hover,
+.level2:hover,
+.tree a:hover {
+
+
+
+    background-color: #9292924f;
+}
+
+
+.l2:hover {
+    font-weight: 600;
+
+
+    background-color: #929292;
+}
+
+.tree summary {
+    display: block;
+    cursor: pointer;
+    padding: 5px;
+}
+
+
+/* 
+@media screen and (max-height: 450px) {
+    .drawer {
+        padding-top: 15px;
+    }
+
+    .drawer a {
+        font-size: 18px;
+    }
+} */

@@ -1,0 +1,197 @@
+/* .t {
+    background-color: aquamarine;
+    padding: 10px;
+}
+
+
+
+ */
+ .TextField {
+    /* border: 0; */
+    /* border-bottom: solid 1px rgb(65, 65, 65); */
+    /* background-color: transparent; */
+    /* padding: 5px; */
+    width: 100%;
+}
+ .FormControl {
+    margin-top: 10px;
+    width: 100%;
+    /* background-color: aquamarine; */
+    display: flex;
+}
+
+.Caption {
+    font-size: 0.875rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: initial;
+    /* line-height: normal; */
+    -webkit-font-smoothing: antialiased;padding-bottom: 3px;
+}
+.CaptionSub {
+    font-size: 9px;
+    margin-top: -5px;
+  
+    padding-bottom: 2px; 
+    font-family: "Merriweather", serif;
+    font-weight: 300;
+}
+
+.FormControl * {
+    margin-right: 5px;
+
+}
+
+/* .CardForm .formTxtInput {
+    width: 100%;
+    background-color: aquamarine !important;
+
+
+} */
+
+.FormTextBox {
+
+    width: 100%;
+
+}
+
+.errorTextBox {
+    border-color: red;
+}
+
+.errorLabel {
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    color: red;
+    padding: 0px;
+    margin: 0px;
+    margin: 5px 0px 2px 0px;
+
+}
+
+input[type="checkbox"] {
+    /* appearance: none; */
+    width: 15px;
+    height: 15px;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    margin-right: 10px;
+}
+
+
+
+input[type="Password"],
+input[type="text"],
+textarea,
+select {
+    height: 1.4375em;
+    padding: 17px;
+    border: 1px solid;
+    font-size: 0.875rem !important;
+    border-color: var(--form-element-border-color);
+    font-weight: 400;
+    border-radius: 0;
+    transition: border-color 0.3s, box-shadow 0.3s background-color 0.5s;
+}
+
+textarea {
+    height: auto;
+}
+
+select {
+    height: auto;
+    padding: 6px;
+}
+
+input[type="Password"]:focus,
+input[type="text"]:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--form-element-border-color-forcus);
+    outline: none;
+    box-shadow: 0 0 1px rgba(0, 123, 255, 0.5);
+}
+
+input[type="Password"]:hover,
+input[type="text"]:hover,
+textarea:hover,
+select:hover {
+    background-color: rgba(231, 231, 231, 0.219);
+    transition: background-color 0.5s;
+}
+.btn {
+    border: none;
+    text-align: center;
+    border-radius: 5px;
+    width: 100%;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    color: #fff;
+    background-color: #2e7d32;
+    display: flex;
+    margin: 0;
+    padding: 3px 32px;
+    align-items: center;
+    list-style: none;
+    justify-content: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, border-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.btn:hover {
+    background-color: #1b5e20;
+    box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.btn:active {
+    scale: 98%;
+    background-color: #154618;
+}
+
+.btnAdd {
+    background-color: #3f2e7d;
+}
+
+.btnAdd:hover {
+    background-color: #2d2158;
+}
+
+.btnAdd:active {
+    background-color: #1d1538;
+}
+
+/* button div {
+    background: tomato;
+    padding: 5px;
+    width: 200px;
+    height: 150px;
+    margin: 10px;
+    line-height: 150px;
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    text-align: center;
+} */
+
+.btn p {
+    padding-left: 5px;
+}
+
+
+
+.material-symbols-light--save-outline-sharp {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    --svg: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000' d='M20 7.423V20H4V4h12.577zm-1 .427L16.15 5H5v14h14zm-7.005 8.688q.832 0 1.418-.582q.587-.582.587-1.413q0-.831-.582-1.418t-1.413-.587t-1.418.582Q10 13.703 10 14.534t.582 1.418q.582.586 1.413.586M6.77 9.77h7.423v-3H6.77zM5 7.85V19V5z'/%3E%3C/svg%3E");
+    background-color: currentColor;
+    -webkit-mask-image: var(--svg);
+    mask-image: var(--svg);
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: 100% 100%;
+    mask-size: 100% 100%;
+    height: 10px;
+}
+.controlContainer
+{
+    display: grid;
+    grid-template-columns: 75% 25% ;
+}

@@ -1,0 +1,133 @@
+:root {
+    --app-bar-height: 56px;
+    --main-bg-color: #e8eff9;
+    --secondary-bg-color: #fff;
+    --font-color-light: #fff;
+    --main-text-color: #333333;
+    --primary-color: #32AFDF;
+    --form-element-border-color: #e8eff9;
+    --form-element-border-color-forcus: #bcc4ce;
+    --GoldenRatio: 61.8vW;
+    --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+body{
+    padding: 0px;
+    margin: 0px;
+}
+
+*, ::after, ::before {
+    box-sizing: border-box; 
+      margin-block-start: 0px;
+}
+
+h2{
+    font-family: "Karla", sans-serif ;
+    font-weight:300 !important;  
+    font-size: 35px !important;
+}
+
+h6{    
+    font-size: 1rem;
+    margin-block-end: 2.33em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight:400;
+    font-family: var(--bs-font-sans-serif);
+}
+
+a
+{
+    color:blue;
+    text-decoration: underline !important;
+}
+
+.flex {
+    display: flex; 
+}
+
+.center{
+    justify-content: center; 
+     text-align: center; 
+}
+
+.sb{
+    padding-bottom: 10px;
+}
+
+.space{width: 5px;}
+
+button {
+    border: none;
+    background-color: var(--primary-color) !important;
+    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+    margin: 0 !important;
+    width: 100%;
+    padding: 7px;
+    color: white; 
+    font-size: 16px; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    transition: background-color 0.3s ease, transform 0.2s ease;  
+}
+
+button:hover {
+    background-color: darken(var(--primary-color), 10%); 
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); 
+}
+
+button:active {
+    transform: scale(0.95); 
+    box-shadow: inset 0px 5px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.Error {
+    color: crimson;
+}
+
+
+
+
+.container-action-button-1 {
+    position: fixed;
+    background-color:#bcc4ce00;
+    width: 100%;
+    /* z-index: -1; */
+    margin-top: 110px;
+visibility:hidden;
+}
+
+.container-action-button-2 {
+    /* background-color: #487ab6; */
+    justify-content: end;
+    display: grid;
+ /* width: 100px; */
+
+}
+.container-action-button-3 {
+    /* background-color: #48b664; */
+    justify-content: end;
+    display: grid;
+ width: 100px;
+
+}.container-action-button-3  button{
+margin-bottom: 10px;
+visibility:visible;
+}.navbar {
+    position: sticky;
+    top: 0;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        /* Styles for small screens */
+        position: relative;
+    }
+    
+    .navbar .offcanvas {
+        /* Ensure offcanvas menu is styled appropriately */
+        width: 250px; /* Adjust width as needed */
+    }
+}

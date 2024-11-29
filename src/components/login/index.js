@@ -66,13 +66,14 @@ function Login(props) {
         <div className={styles.loginCantainer}>
             <Div flex>
                 <div className={styles.loginCantainerLeft}>
-                    <img src="image.jpg" alt="Description of the image" />
+              
+                    <img src={`${process.env.PUBLIC_URL}/image.jpg`} alt="Description of the image" />
                 </div>
                 <div className={styles.loginCantainerRight}>
                     <div className={styles.top}>
                         <form onSubmit={formik.handleSubmit}>
                             <Div center>
-                                <img src="omis.png" alt="Description of the image" width="40%" height="40%" />
+                                <img src={`${process.env.PUBLIC_URL}/omis.png`} alt="Description of the image" width="40%" height="40%" />
                             </Div>
 
                             <Div center><h2>LOGIN</h2></Div>

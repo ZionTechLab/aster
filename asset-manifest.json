@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/aster2/static/css/main.1b09fba1.css",
-    "main.js": "/aster2/static/js/main.69e70e5b.js",
-    "static/js/453.032c37ae.chunk.js": "/aster2/static/js/453.032c37ae.chunk.js",
-    "index.html": "/aster2/index.html",
-    "main.1b09fba1.css.map": "/aster2/static/css/main.1b09fba1.css.map",
-    "main.69e70e5b.js.map": "/aster2/static/js/main.69e70e5b.js.map",
-    "453.032c37ae.chunk.js.map": "/aster2/static/js/453.032c37ae.chunk.js.map"
+    "main.css": "/aster/static/css/main.1b09fba1.css",
+    "main.js": "/aster/static/js/main.72209208.js",
+    "static/js/453.032c37ae.chunk.js": "/aster/static/js/453.032c37ae.chunk.js",
+    "index.html": "/aster/index.html",
+    "main.1b09fba1.css.map": "/aster/static/css/main.1b09fba1.css.map",
+    "main.72209208.js.map": "/aster/static/js/main.72209208.js.map",
+    "453.032c37ae.chunk.js.map": "/aster/static/js/453.032c37ae.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1b09fba1.css",
-    "static/js/main.69e70e5b.js"
+    "static/js/main.72209208.js"
   ]
 }

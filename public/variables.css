@@ -55,8 +55,16 @@ a
     padding-bottom: 10px;
 }
 
+.p-0 {
+    padding: 0px !important;
+  }
+.m-0 {
+    margin: 0px !important;
+  }
 .space{width: 5px;}
-
+.uppercase {
+    text-transform: uppercase;
+}
 button {
     border: none;
     background-color: var(--primary-color) !important;

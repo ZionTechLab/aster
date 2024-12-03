@@ -1,14 +1,4 @@
 import { configureStore } from "@reduxjs/toolkit";
-// import {
-//   fileReducer,
-//   FileUploadAsync,
-//   BulkProcessAsync,
-//   GetProcessedData,
-// } from "./Slices/fileSlice";
-// import {
-//   notificationReducer,
-//   addNotification,
-// } from "./Slices/notificationSlice";
 import {
   authReducer,
   setAuthStatus,
@@ -33,9 +23,4 @@ export {
   init,
   setAuthStatus,
   reset,
-  // setActiveForm,
-  // FileUploadAsync,
-  // BulkProcessAsync,
-  // GetProcessedData,
-  // addNotification,
 };

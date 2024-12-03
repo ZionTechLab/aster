@@ -11,6 +11,7 @@
 
 .loginCantainer {
     height: 100vH;
+    overflow: hidden;
 }
 
 .loginCantainerLeft {
@@ -33,10 +34,12 @@
     background-color: var(--main-bg-color);
     width: calc(100vW - var(--GoldenRatio));
     padding: 50px;
+    /* overflow: hidden; */
 }
 
-.top {
-    height: 61.8%;
+.top {height: 30%;
+    /* height: 61.8%; */
+    /* background-color:crimson; */
 }
 
 /* .top img{
@@ -44,9 +47,13 @@
     0px 2px 2px 0px rgba(0, 0, 0, 0.14),
     0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 } */
-.botom {
-    height: 38.2%;
-} @media only screen and (max-width: 700px) {
+.botom {height: 70%;
+    /* height: 38.2%; */
+    /* background-color: blue; */
+    /* overflow: hidden; */
+} 
+
+@media only screen and (max-width: 700px) {
    
     .loginCantainerLeft{
          visibility:hidden;  width: 0vW;

@@ -3,33 +3,31 @@ import styles from "./FormControls.module.css";
 
 function TextField(props) {
   return (
-    <div className={styles.TextField}    >
+    <div className={styles.TextField}>
       <label className={styles.Caption} htmlFor={props.id}>
         {props.Caption} :{" "}
-      </label> 
-       {/* <div className={styles.CaptionSub} for={props.id}>
-        {props.CaptionSub}
-      </div> */}
-      <div className={props.children ==null?'':        styles.controlContainer}>
-      <input
-        type="text"
-        className={`${styles.FormTextBox} `} //${styles.errorTextBox}
-        id={props.id}
-        name={props.id}
-        placeholder={props.Caption}
-        onChange={props.Binding.handleChange}
-        onBlur={props.Binding.handleBlur}
-        defaultValue={props.Binding.initialValues[props.id]}
-      >
+      </label>
 
-
-      </input>
- {props.children}
+      <div className={props.children == null ? "" : styles.controlContainer}>
+        <input
+          type="text"
+          className={`${styles.FormTextBox} `} //${styles.errorTextBox}
+          id={props.id}
+          name={props.id}
+          placeholder={props.Caption}
+          // onChange={props.Binding.handleChange}
+          onChange={props?.Binding?.handleChange || (() => {})}
+          onBlur={props?.Binding?.handleBlur|| (() => {})}
+          defaultValue={props?.Binding?.initialValues[props.id]}
+        ></input>
+        {props.children}
       </div>
       {/* <br /> */}
       <div id="fnameErr" className={styles.errorLabel}>
-        {props.Binding.errors[props.id] && props.Binding.touched[props.id] ? (
-          <div>{props.Binding.errors[props.id]}</div>
+        {props?.Binding?.errors[props.id] && props?.Binding?.touched[props.id] ? (
+          <div>
+            {props?.Binding?.errors[props.id]}
+          </div>
         ) : (
           ""
         )}
@@ -39,7 +37,7 @@ function TextField(props) {
 }
 function Password(props) {
   return (
-    <div >
+    <div>
       <label className={styles.Caption} htmlFor={props.id}>
         {props.Caption} :{" "}
       </label>
@@ -53,11 +51,8 @@ function Password(props) {
         onChange={props.Binding.handleChange}
         onBlur={props.Binding.handleBlur}
         defaultValue={props.Binding.initialValues[props.id]}
-      >
-
-
-      </input>
- {/* {props.children}
+      ></input>
+      {/* {props.children}
       </div> */}
       {/* <br /> */}
       <div id="fnameErr" className={styles.errorLabel}>
@@ -70,13 +65,13 @@ function Password(props) {
     </div>
   );
 }
-function TextArea (props) {
+function TextArea(props) {
   return (
     <div className={styles.formTxtInput}>
       <label className={styles.Caption} htmlFor={props.id}>
         {props.Caption} :{" "}
       </label>
-      <textarea 
+      <textarea
         // type="text"
         className={`${styles.FormTextBox} `} //${styles.errorTextBox}
         id={props.id}
@@ -102,27 +97,27 @@ function Select(props) {
   const [selectedValue, setSelectedValue] = useState("");
 
   useEffect(() => {
-    const selectedItem = props.data.find(
-      (option) => option[props.dataCode] === props.Binding.initialValues[props.id]
+    const selectedItem = props?.data?.find(
+      (option) =>
+        option[props?.dataCode] === props?.Binding?.initialValues[props.id]
     );
-    setSelectedValue(selectedItem ? selectedItem[props.dataName] : "");
-    props.Binding.setFieldValue(
-      props.id,
-      props.Binding.initialValues[props.id]
+    setSelectedValue(selectedItem ? selectedItem[props?.dataName] : "");
+    props?.Binding?.setFieldValue(
+      props?.id,
+      props?.Binding?.initialValues[props?.id]
     );
-  }, [props.Binding.initialValues[props.id]]);
+  }, [props?.Binding?.initialValues[props?.id]]);
 
-  // const handleSelectChange = (e) => {
-  //   setSelectedValue(e.target.value);
-  //   props.Binding.setFieldValue(props.id, e.target.value); // Use selected value directly
-  // };
 
   const handleSelectChange = (e) => {
     setSelectedValue(e.target.value);
-    const selectedItem = props.data.find(
+    const selectedItem = props?.data?.find(
       (option) => option[props.dataCode] === e.target.value
     );
-    props.Binding.setFieldValue(props.id, selectedItem ? selectedItem[props.dataCode] : "");
+    props.Binding.setFieldValue(
+      props.id,
+      selectedItem ? selectedItem[props?.dataCode] : ""
+    );
   };
 
   return (
@@ -135,20 +130,21 @@ function Select(props) {
         className={`${styles.FormTextBox} `}
         id={props.id}
         name={props.id}
-        onBlur={props.Binding.handleBlur}
+        onBlur={props?.Binding?.handleBlur|| (() => {})}
         onChange={handleSelectChange}
         value={selectedValue}
+        // value={''}
       >
-        {props.data.map((option, index) => (
-          <option key={index} value={option[props.dataCode]}>
-            {option[props.dataName]}
+        {props?.data?.map((option, index) => (
+          <option key={index} value={option[props?.dataCode]}>
+            {option[props?.dataName]}
           </option>
         ))}
       </select>
       <br />
-      <div id="fnameErr" className={styles.errorLabel}>
-        {props.Binding.errors[props.id] && props.Binding.touched[props.id] ? (
-          <div>{props.Binding.errors[props.id]}</div>
+      <div id="fnameErr" className={styles?.errorLabel}>
+        {props?.Binding?.errors[props.id] && props?.Binding?.touched[props.id] ? (
+          <div>{props?.Binding?.errors[props?.id]}</div>
         ) : (
           ""
         )}
@@ -156,7 +152,6 @@ function Select(props) {
     </div>
   );
 }
-
 
 function CheckBox(props) {
   const [selectedValue, setSelectedValue] = useState();
@@ -205,4 +200,4 @@ function FormControl(props) {
   return <div className={styles.FormControl}>{props.children}</div>;
 }
 
-export { TextField,TextArea,Password, Select, CheckBox, FormControl };
+export { TextField, TextArea, Password, Select, CheckBox, FormControl };

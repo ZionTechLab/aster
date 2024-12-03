@@ -17,7 +17,7 @@ const Drawer = (props) => {
       <div className={sty.join(" ")}>
         <nav>
           <ul className={classes.tree}>
-            {navigationData.map((column) => (
+            {/* {navigationData.map((column) => (
               <li>
                 <details open>
                   <summary className="level1">{column.title}</summary>
@@ -44,8 +44,41 @@ const Drawer = (props) => {
                   )}
                 </details>
               </li>
-            ))}
+            ))} */}
+{navigationData.map((column, index) => (
+  <li key={index}>
+    <details open>
+      <summary className="level1">{column.title}</summary>
 
+      {column.children && (
+        <ul>
+          {column.children.map((column1, index1) => (
+            <li key={index1}>
+              <details open>
+                <summary className="level2">{column1.title}</summary>
+
+                {column1.children && (
+                  <ul>
+                    {column1.children.map((column2, index2) => (
+                      <li key={index2} className="subList">
+                        <Link
+                          to={column2.title}
+                          onClick={() => props.closeDrawer()}
+                        >
+                          {column2.title}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </details>
+            </li>
+          ))}
+        </ul>
+      )}
+    </details>
+  </li>
+))}
             <a href="aaa" onClick={() => props.closeDrawer()}>
               Neptune
             </a>

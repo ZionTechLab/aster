@@ -1,28 +1,34 @@
-
-import React, { useState } from 'react';
-import './App.css';
-import AppBar from './components/appBar';
-import BusinessOwnerSignup from './components/businessownersignup';
-import Login from './components/login';
-import Page from './containers/page';
+import React, { useState } from "react";
+import "./App.css";
+import AppBar from "./components/appBar";
+import BusinessOwnerSignup from "./components/businessownersignup";
+import Organization from "./components/Organization/organization";
+import Login from "./components/login";
+import Page from "./containers/page";
 import { useDispatch, useSelector } from "react-redux";
+
 function App() {
   const [show, setShow] = useState(false);
-
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
   const authData = useSelector((state) => state.auth);
   let contains = "";
+
   if (authData.isAuthOK === false) contains = <Login />;
   else if (authData.isAuthOK === true)
-    contains = (<><AppBar /><Page>
-
-      <BusinessOwnerSignup/>
-            </Page></>)
+    contains = (
+      <>
+        <AppBar />
+        <Page>
+          {/* <Organization/> */}
+          <BusinessOwnerSignup />
+        </Page>
+      </>
+    );
 
   return (
     <div>
-{contains}
+      {contains}
 
       {/*  */}
       {/* <Login/> */}
@@ -31,9 +37,6 @@ function App() {
 
 <BusinessOwnerSignup/>
       </Page> */}
-
-
-
 
       {/* Route definitions */}
       {/* <Routes>
@@ -99,12 +102,6 @@ function App() {
           </Col>
         </Row>
       </Container> */}
-
-
-
-
-
-
     </div>
   );
 }
@@ -120,7 +117,6 @@ function Contact() {
   return <h2>Contact Page</h2>;
 }
 export default App;
-
 
 // to do
 
